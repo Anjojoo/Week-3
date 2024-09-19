@@ -1,0 +1,75 @@
+---
+title: "Week 3 Reflection"
+author: 
+  - Angel Xu
+thanks: "Code and data are available at: LINK."
+date: today
+date-format: long
+abstract: "I use data form opendatatoronto to analyze marriage dates. I did data cleaning and tests to produce a better data for analysis."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+data <- read_csv(here::here("cleaned_data.csv"))
+
+```
+
+
+# Introduction
+
+I used the analysis data to analyze the number of marriage in every year from the start date to observe the change in marriage number.
+
+
+# Data {#sec-mydatasection}
+
+Data I used are all form opendatatoronto.
+
+```{r}
+#| label: fig-marriage
+#| fig-cap: Bills of penguins
+#| echo: false
+
+data |> 
+  ggplot(aes(x = year)) +
+  geom_bar()
+
+```
+
+In the graph above, I used the variable year as x-axis to view the number of marriage in every year from the start date. From the bars, I can view the change in marriages.
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+
+## Weaknesses and next steps
+
+The number of marriage is large and hard to see the difference.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+
+
+\newpage
+
+
+# References
+
